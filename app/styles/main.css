@@ -1,0 +1,135 @@
+/*fonts*/
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+/* General styles */
+body {
+  padding: 0;
+}
+
+.cover{
+  background-color: #FEFEFE;
+  min-height:3000px;
+  border: 1px solid #000;
+  width:250px;
+}
+
+h4{
+  border-bottom:1px solid #000;
+  text-align:center;
+  padding-bottom:5%;
+}
+
+h3{
+  padding:0 0 1% 4%;
+}
+
+.close{
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+ /* sticky notes */
+.note {
+    position: relative;
+    width: 180px;
+    min-height: 50px;
+    margin: 25px auto;
+    padding: 60px 15px 15px 15px;
+    -webkit-box-shadow: 0 2px 12px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 2px 12px rgba(0,0,0,.5);
+    box-shadow: 0 1px 2px #000;
+    -webkit-transform: rotate(-.5deg);
+    -moz-transform: rotate(-.5deg);
+    -o-transform: rotate(-.5deg);
+}
+
+.note.deploy-status{
+    background: #93DB70;
+ }
+
+ .note.test-status{
+    background: #FAA457;
+ }
+
+ .note.dev-status{
+    background: #FFDD2A;
+ }
+
+ .note.log-status{
+    background: #FFFACD;
+ }
+
+ .note.pending-status{
+    background: #ff6666;
+ }
+
+ .note p:nth-child(even) {
+    -webkit-transform: rotate(.5deg);
+    -moz-transform: rotate(.5deg);
+    -o-transform: rotate(.5deg);
+}
+
+.note p {
+    text-align: center;
+    font-family: "Shadows Into Light", Arial;
+    font-size: 16px;
+    color: #000;
+    overflow:hidden;
+}
+
+.note p::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 60px;
+    top: -15px;
+    width: 75px;
+    height: 25px;
+    z-index: 2;
+    background-color: #ff1919;
+    border: 2px solid rgba(255,255,255,0.5);
+    -webkit-box-shadow: 0 0 5px #888;
+    -moz-box-shadow: 0 0 5px #888;
+    box-shadow: 2px 2px 2px #000;
+    -webkit-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+}
+
+.note p:nth-child(even)::before {
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+}
+
+.col-md-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* Five columns in a row */
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px){
+    .board{
+         width:70%;
+         margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
