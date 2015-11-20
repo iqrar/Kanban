@@ -1,8 +1,8 @@
 # kanban
 
-###npm install
+npm install
 
-###bower install
+bower install
 
 ## Build & development
 
