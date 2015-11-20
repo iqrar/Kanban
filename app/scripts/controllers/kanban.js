@@ -37,30 +37,19 @@ angular.module('kanbanApp')
     // create new story
     $scope.createStory = function(){
        
-       $http.post('http://176.34.78.245/stories' ,$scope.story)
-        .success(function(data){
-
-          if(data.state === 'Pending'){
-            $scope.board.Pending.push(data);
-          }else if(data.state === 'Development'){
-            $scope.board.Development.push(data);
-          }else if(data.state === 'Backlog'){
-            $scope.board.Backlog.push(data);
-          }else if(data.state === 'Test'){
-            $scope.board.Test.push(data);
-          }else if(data.state === 'Deploy'){
-            $scope.board.Deploy.push(data);
-          }
-           $scope.story.title = "";
-		   $scope.story.user_id = "";
-		   $scope.story.state = "";
-
-        }).error(function(){
-
-          alert('Pleae create agian');
-
-       });
-    };
+       if($scope.story.state === "Pending"){
+               $scope.board.Pending.push($scope.story);
+       }else if ($scope.story === "Backlog"){
+                $scope.board. Backlog.push($scope.story);
+       }else  if( $scope.story.state === "Development"){
+	                      $scope.board.Development.push($scope.story);
+	   }else  if( $scope.story.state === "Test"){
+	                      $scope.board.Test.push($scope.story);
+       }else  if( $scope.story.state === "Deploy"){
+	                      $scope.board.Deploy.push($scope.story);
+	   }
+          
+	 };
 
     // Delete story
 	$scope.removeStroy = function(id ,state, index){
