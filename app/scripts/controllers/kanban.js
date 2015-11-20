@@ -13,7 +13,7 @@ angular.module('kanbanApp')
     };
 
     // Get all stories
-	$http.get('http://176.34.78.245/stories').success(function(data){
+	$http.get('data.json').success(function(data){
 	         $scope.data = data;
 	   	     $scope.data.forEach(function(item){
 	             
