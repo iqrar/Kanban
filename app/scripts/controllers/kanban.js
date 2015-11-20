@@ -78,10 +78,6 @@ angular.module('kanbanApp')
 	       var id = story.id;
 	       var currentState = sourceItemScope.dest.sortableScope.modelValue[0].type;
 	       story.state = currentState;
-
-	       $http.put('http://176.34.78.245/stories/'+id, story).success(function(data){
-	       	
-            });
 	    },
 	    
 	     //restrict move across columns. move only within neighbour columns.
