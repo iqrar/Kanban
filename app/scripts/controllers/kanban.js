@@ -66,16 +66,7 @@ angular.module('kanbanApp')
           }else if(state === 'Deploy'){
             $scope.board.Deploy.splice(index, 1);
         }
-
-       $http.delete('http://176.34.78.245/stories/' +id).success(function(data){
-          
-        }).
-
-       error(function(){
-         alert('Please delete agian');
-       });
-	};
-
+    };
     // Upadte states and restricting columns
     $scope.sortableOptions = {
 
